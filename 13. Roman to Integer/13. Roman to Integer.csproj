@@ -8,4 +8,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\3. Longest Substring Without Repeating Characters\3. Longest Substring Without Repeating Characters.csproj" />
+  </ItemGroup>
+
 </Project>

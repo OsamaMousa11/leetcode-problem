@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using _3._Longest_Substring_Without_Repeating_Characters;
+using System.Linq;
 using System.Security.Cryptography;
 
 class Program
@@ -6,7 +7,11 @@ class Program
     public static void Main(string[] args)
     {
        Console.WriteLine( RomanToInt("MCMXCIV"));
-      
+        Solution x=new Solution();
+        
+        Console.WriteLine(x.LengthOfLongestSubstring("pwwkew"));
+
+
     }
 
     public  static int RomanToInt(string s)
@@ -20,6 +25,7 @@ class Program
         word['C'] = 100;
         word['D'] = 500;
         word['M'] = 1000;
+
         var sum = 0;
         var oldvalue = 0;
 
