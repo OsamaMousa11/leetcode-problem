@@ -7,13 +7,22 @@
         public  int LengthOfLongestSubstring(string s)
         {
 
-            var uniquechar = s.ToLower().Substring(0, s.Length).Distinct();
-            int counter = 0;
-            foreach(var x in uniquechar)
+            HashSet<char> charSet = new HashSet<char>();
+            int left = 0;
+            int MaxLength = 0;
+
+            for (int right = 0; right < s.Length; right++)
             {
-                counter++;
+                while (charSet.Contains(s[right]))
+                {
+                    charSet.Remove(s[left]);
+                    left++;
+                }
+                charSet.Add(s[right]);
+                MaxLength = Math.Max(MaxLength, right - left + 1);
             }
-            return counter;
+
+            return MaxLength;
         }
     }
 }
